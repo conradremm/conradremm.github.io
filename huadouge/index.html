@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都阁-品质鲜花礼品与绿植养护一站式服务平台</title>
+    <meta name="description" content="花都阁致力于提供高品质鲜花、创意花礼、室内绿植及专业养护知识，涵盖花束、永生花、开业花篮等全品类，满足您对美好生活的每一份期待。">
+    <meta name="keywords" content="花都阁,鲜花,花束,绿植,永生花,花礼,礼品,花艺,鲜花速递,植物养护">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            background: #fcf9f6;
+            color: #2d3a3a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f0e8e0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #e58c8c, #c96f6f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(201, 111, 111, 0.2);
+        }
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #b85c5c;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+        .logo-sub {
+            font-size: 0.75rem;
+            color: #9b7e7e;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 2px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            font-size: 1rem;
+            color: #3d4a4a;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #b85c5c;
+            border-bottom-color: #e58c8c;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .search-box {
+            display: flex;
+            border: 1px solid #e3d5cc;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            width: 180px;
+            background: transparent;
+            color: #3d4a4a;
+        }
+        .search-box button {
+            background: #e58c8c;
+            border: none;
+            color: #fff;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .search-box button:hover {
+            background: #c96f6f;
+        }
+        .cart-link {
+            font-size: 1.2rem;
+            color: #b85c5c;
+            position: relative;
+        }
+        .cart-count {
+            background: #e58c8c;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: -12px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(105deg, #f9f1eb 0%, #f4e3d8 100%);
+            padding: 60px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(229, 140, 140, 0.08);
+            border-radius: 50%;
+            top: -100px;
+            right: -50px;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-copy {
+            flex: 1;
+            min-width: 280px;
+        }
+        .hero-copy h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #4a3a33;
+            line-height: 1.3;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero-copy h1 span {
+            color: #b85c5c;
+            position: relative;
+        }
+        .hero-copy p {
+            font-size: 1.1rem;
+            color: #6b5b55;
+            margin-bottom: 30px;
+            max-width: 520px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #b85c5c;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 14px rgba(184, 92, 92, 0.3);
+        }
+        .btn-primary:hover {
+            background: #a14e4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(184, 92, 92, 0.35);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #b85c5c;
+            border: 2px solid #e58c8c;
+            padding: 10px 26px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-outline:hover {
+            background: #fff;
+            border-color: #b85c5c;
+        }
+        .hero-visual {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-flower-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+        }
+        .hero-flower-card .flower-emoji {
+            font-size: 6rem;
+            margin-bottom: 12px;
+        }
+        .hero-flower-card h3 {
+            color: #4a3a33;
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+        .hero-flower-card p {
+            color: #8a7a70;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .price-tag {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #b85c5c;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: #fff;
+            padding: 28px 0;
+            border-bottom: 1px solid #f0e8e0;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .trust-icon {
+            font-size: 2rem;
+        }
+        .trust-text strong {
+            display: block;
+            color: #4a3a33;
+            font-size: 1rem;
+        }
+        .trust-text span {
+            color: #9b8a80;
+            font-size: 0.85rem;
+        }
+
+        /* Categories Section */
+        .section {
+            padding: 60px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header h2 {
+            font-size: 2rem;
+            color: #4a3a33;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .section-header p {
+            color: #9b8a80;
+            font-size: 1rem;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s;
+            border: 1px solid #f5eee7;
+        }
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(184, 92, 92, 0.1);
+            border-color: #e8d5cd;
+        }
+        .category-emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        .category-card h3 {
+            color: #4a3a33;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .category-card p {
+            color: #9b8a80;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Featured Products */
+        .featured {
+            background: #fff;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .product-card {
+            background: #fcf9f6;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #f0e8e0;
+            transition: all 0.25s;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            transform: translateY(-4px);
+        }
+        .product-img {
+            background: linear-gradient(145deg, #f5e5dc, #ead9cd);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-tag {
+            background: #e58c8c;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .product-info h3 {
+            color: #4a3a33;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+        .product-info .desc {
+            color: #9b8a80;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            color: #b85c5c;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .add-btn {
+            background: #fff;
+            border: 1px solid #e58c8c;
+            color: #b85c5c;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .add-btn:hover {
+            background: #e58c8c;
+            color: #fff;
+        }
+
+        /* Care Guide / Info Section */
+        .care-section {
+            background: #f4ece6;
+        }
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .care-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        .care-card h3 {
+            color: #4a3a33;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .care-card h3 .icon {
+            font-size: 1.8rem;
+        }
+        .care-card p {
+            color: #6b5b55;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        .care-card ul {
+            margin-top: 10px;
+        }
+        .care-card ul li {
+            padding: 4px 0;
+            color: #6b5b55;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 18px;
+        }
+        .care-card ul li::before {
+            content: "❀";
+            position: absolute;
+            left: 0;
+            color: #e58c8c;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #fff;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #f0e8e0;
+            padding: 20px 0;
+        }
+        .faq-q {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4a3a33;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-q::after {
+            content: "+";
+            font-size: 1.6rem;
+            color: #e58c8c;
+            transition: transform 0.2s;
+        }
+        .faq-item.active .faq-q::after {
+            content: "−";
+        }
+        .faq-a {
+            padding-top: 12px;
+            color: #6b5b55;
+            font-size: 0.95rem;
+            display: none;
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-a {
+            display: block;
+        }
+
+        /* Testimonials Light */
+        .testimonials {
+            background: #fcf9f6;
+            padding: 60px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #f0e8e0;
+        }
+        .testimonial-card .stars {
+            color: #f0b84b;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .testimonial-card p {
+            color: #6b5b55;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .testimonial-card .customer {
+            color: #9b8a80;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Promo Banner */
+        .promo {
+            background: linear-gradient(90deg, #d9b3a7, #c96f6f);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #fff;
+            margin: 60px 0;
+        }
+        .promo h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .promo p {
+            opacity: 0.9;
+        }
+        .promo .btn {
+            background: #fff;
+            color: #b85c5c;
+            font-weight: 600;
+            border-radius: 40px;
+            padding: 12px 28px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .promo .btn:hover {
+            transform: scale(1.04);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #2d3a3a;
+            color: #c9bdb6;
+            padding: 50px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand h4 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .footer-col h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: #c9bdb6;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #9b8a80;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .care-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (max-width: 680px) {
+            .hero-copy h1 {
+                font-size: 2rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                gap: 16px;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .search-box input {
+                flex: 1;
+                width: auto;
+            }
+            .category-grid,
+            .product-grid,
+            .care-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .promo {
+                padding: 28px;
+                text-align: center;
+                justify-content: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">花</div>
+                <div>
+                    <div class="logo-text">花都阁</div>
+                    <span class="logo-sub">Flower House</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#categories">花艺分类</a></li>
+                    <li><a href="#featured">今日花礼</a></li>
+                    <li><a href="#care">养护指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索花材或礼品" aria-label="搜索">
+                    <button>搜索</button>
+                </div>
+                <div class="cart-link">
+                    🛒
+                    <span class="cart-count">3</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>花都阁 <span>让每一天</span><br>都有花香的陪伴</h1>
+                    <p>从产地直采到匠心设计，我们为您挑选最新鲜的花材与最富创意的花礼。无论是浪漫告白、温馨祝福，还是日常空间的绿意点缀，花都阁都能满足您对美好生活的想象。</p>
+                    <div class="hero-buttons">
+                        <a href="#featured" class="btn-primary">选购今日花礼</a>
+                        <a href="#care" class="btn-outline">查看养护知识</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-flower-card">
+                        <div class="flower-emoji">💐</div>
+                        <h3>法式浪漫花束</h3>
+                        <p>精选厄瓜多尔玫瑰 · 尤加利叶 · 蕾丝花</p>
+                        <div class="price-tag">¥299 起</div>
+                        <div style="margin-top: 14px; color: #9b8a80; font-size: 0.85rem;">🎁 附赠手写贺卡 · 同城速达</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container trust-grid">
+                <div class="trust-item">
+                    <span class="trust-icon">🚚</span>
+                    <div class="trust-text">
+                        <strong>急速配送</strong>
+                        <span>同城3小时达</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🌱</span>
+                    <div class="trust-text">
+                        <strong>新鲜保证</strong>
+                        <span>产地直采品质</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">💝</span>
+                    <div class="trust-text">
+                        <strong>专属定制</strong>
+                        <span>花艺师一对一</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🔄</span>
+                    <div class="trust-text">
+                        <strong>无忧售后</strong>
+                        <span>7天退换保障</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>花艺分类</h2>
+                    <p>无论何种场合，花都阁都有合适的花礼表达您的心意</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-emoji">💐</div>
+                        <h3>浪漫花束</h3>
+                        <p>玫瑰、郁金香、洋桔梗等经典花材，搭配精美包装，适合表白与纪念日。</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-emoji">🎀</div>
+                        <h3>创意花盒</h3>
+                        <p>永生花与鲜花结合，设计感十足的花盒礼盒，长久保存美好记忆。</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-emoji">🏺</div>
+                        <h3>商务花篮</h3>
+                        <p>开业庆典、会议活动的气派花篮，花材丰富，寓意宏图大展。</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-emoji">🪴</div>
+                        <h3>室内绿植</h3>
+                        <p>琴叶榕、龟背竹、多肉组合等适合家居与办公空间的绿植盆栽。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section featured" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>今日精选花礼</h2>
+                    <p>花艺师每日推荐，每一束都是独特的设计</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">🌹</div>
+                        <div class="product-info">
+                            <span class="product-tag">热卖</span>
+                            <h3>朱砂玫瑰束</h3>
+                            <p class="desc">丝绒质感的红玫瑰搭配尤加利，经典中的浪漫之作。</p>
+                            <div class="product-footer">
+                                <span class="price">¥259</span>
+                                <button class="add-btn">加入购物车</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">🌻</div>
+                        <div class="product-info">
+                            <span class="product-tag">新品</span>
+                            <h3>暖阳向日葵</h3>
+                            <p class="desc">向阳而生的向日葵，搭配雏菊与黄莺，传递快乐能量。</p>
+                            <div class="product-footer">
+                                <span class="price">¥199</span>
+                                <button class="add-btn">加入购物车</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">🌸</div>
+                        <div class="product-info">
+                            <span class="product-tag">限定</span>
+                            <h3>粉黛永生花盒</h3>
+                            <p class="desc">进口永生玫瑰与绣球，恒久保存心意，无需打理。</p>
+                            <div class="product-footer">
+                                <span class="price">¥399</span>
+                                <button class="add-btn">加入购物车</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Care Guide -->
+        <section class="section care-section" id="care">
+            <div class="container">
+                <div class="section-header">
+                    <h2>花都阁 · 养护小课堂</h2>
+                    <p>让鲜花与绿植陪伴更久，这些技巧您需要知道</p>
+                </div>
+                <div class="care-grid">
+                    <div class="care-card">
+                        <h3><span class="icon">✂️</span> 鲜花保鲜</h3>
+                        <p>收到花束后，建议尽快去除包装，将花茎底部45°斜剪2-3厘米，放入干净的花瓶中。</p>
+                        <ul>
+                            <li>每1-2天换一次清水</li>
+                            <li>加入适量鲜花保鲜剂</li>
+                            <li>避免阳光直射与空调风口</li>
+                        </ul>
+                    </div>
+                    <div class="care-card">
+                        <h3><span class="icon">💧</span> 绿植浇水</h3>
+                        <p>不同绿植对水分需求差异较大，遵循"见干见湿"原则。浇水前检查盆土湿度。</p>
+                        <ul>
+                            <li>多肉植物控水干透浇透</li>
+                            <li>蕨类植物保持湿度</li>
+                            <li>冬季减少浇水频率</li>
+                        </ul>
+                    </div>
+                    <div class="care-card">
+                        <h3><span class="icon">☀️</span> 光照摆放</h3>
+                        <p>大部分开花植物需要充足散射光，而观叶植物对光照适应性更强。</p>
+                        <ul>
+                            <li>月季、茉莉喜充足阳光</li>
+                            <li>绿萝、虎皮兰耐半阴</li>
+                            <li>定期转动花盆受光均匀</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo -->
+        <div class="container">
+            <div class="promo">
+                <div>
+                    <h3>🌸 花都阁会员日</h3>
+                    <p>每月8日，全场花礼9折，还有专属定制服务体验</p>
+                </div>
+                <button class="btn" onclick="alert('感谢您关注花都阁会员日活动，请持续关注我们！')">立即了解</button>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>花友们的真实分享</h2>
+                    <p>来自花都阁客户的温暖反馈</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"花都阁的花束包装得非常精致，女朋友收到后特别惊喜，玫瑰也非常新鲜，已经回购第二次了。"</p>
+                        <div class="customer">— 李先生 · 北京</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"办公室的绿植一直在花都阁订购，每一盆都养得很好，客服也很耐心解答养护问题，值得信赖。"</p>
+                        <div class="customer">— 陈小姐 · 杭州</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★☆</div>
+                        <p>"给妈妈订的生日花篮，花材搭配得很用心，妈妈特别喜欢。配送也很准时，体验很好。"</p>
+                        <div class="customer">— 王女士 · 成都</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>购买常见问题</h2>
+                    <p>这里为您解答关于订购、配送与售后的疑问</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-q">花都阁的鲜花可以指定配送时间吗？</div>
+                        <div class="faq-a">可以的。在您下单时可以选择备注期望送达的时间段，我们会尽量为您协调安排。同城配送通常可在3小时内送达，节假日建议提前一天预订。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">如果收到的花不满意，可以退换吗？</div>
+                        <div class="faq-a">我们承诺所有花材均经过严格质检。如果因运输原因导致花材严重受损，您可以在签收后2小时内联系客服，我们会为您提供补发或退款处理。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">花束的包装纸和花瓶是否包含在价格内？</div>
+                        <div class="faq-a">花束类商品包含精美包装纸与丝带。展示图中的花瓶属于道具，如需要花瓶可以单独选购。部分花篮和花盒自带容器。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">永生花可以保存多久？需要特别养护吗？</div>
+                        <div class="faq-a">在干燥阴凉的环境下，永生花可以保存2-3年甚至更久。无需浇水，避免阳光直射和潮湿环境即可。如有灰尘可用软毛刷轻轻拂拭。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>💮 花都阁</h4>
+                    <p>花都阁致力于将自然之美融入现代生活。我们相信每一朵花都有自己的语言，用心挑选每一枝花材，为您的每一个重要时刻增添仪式感。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>关于花都阁</h5>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">花艺师团队</a></li>
+                        <li><a href="#">门店地址</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>客户服务</h5>
+                    <ul>
+                        <li><a href="#">配送说明</a></li>
+                        <li><a href="#">售后政策</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>关注我们</h5>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">小红书</a></li>
+                        <li><a href="#">抖音</a></li>
+                        <li><a href="#">微博</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 花都阁 · 让美好自然发生 | 本站内容仅供参考，最终解释权归花都阁所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 展开/折叠
+        document.querySelectorAll('.faq-q').forEach(function(q) {
+            q.addEventListener('click', function() {
+                var item = this.parentElement;
+                // 关闭其他项
+                document.querySelectorAll('.faq-item').forEach(function(other) {
+                    if (other !== item) {
+                        other.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        // 模拟加入购物车提示
+        document.querySelectorAll('.add-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                alert('已加入购物车！感谢您选择花都阁 🌸');
+            });
+        });
+    </script>
+</body>
+                          </html>
