@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无名小站网址-精选实用网址导航与资源收录指南</title>
+    <meta name="description" content="无名小站网址收录了各类实用、有趣、小众的网站资源，提供分类导航、使用推荐与访问指南，帮助你发现网络上有价值的信息角落。">
+    <meta name="keywords" content="无名小站,网址导航,小众网站,实用网站,资源收录,网站推荐">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f7f8fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #4a6cf7, #6c8cff);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a2b4e;
+            letter-spacing: 0.5px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            font-size: 0.95rem;
+            color: #34495e;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .main-nav a:hover {
+            border-bottom-color: #4a6cf7;
+            color: #4a6cf7;
+        }
+
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: #f0f2f5;
+            border-radius: 20px;
+            padding: 4px 4px 4px 16px;
+        }
+
+        .header-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 0.9rem;
+            width: 180px;
+            color: #2c3e50;
+        }
+
+        .header-search button {
+            background: #4a6cf7;
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #eef2ff 0%, #f9faff 100%);
+            padding: 48px 0 56px;
+            border-bottom: 1px solid #e8ecf1;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            color: #1a2b4e;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: #4a5a6a;
+            max-width: 560px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #4a6cf7;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 36px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a2b4e;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #7f8c9b;
+            margin-top: 2px;
+        }
+
+        .hero-illustration {
+            flex: 0 0 320px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 30px rgba(74, 108, 247, 0.12);
+            border: 1px solid #e8ecf1;
+        }
+
+        .illustration-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: #f8faff;
+            border-radius: 10px;
+            border-left: 4px solid #4a6cf7;
+        }
+
+        .ill-icon {
+            width: 28px;
+            height: 28px;
+            background: #eef2ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .ill-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .ill-tag {
+            margin-left: auto;
+            font-size: 0.7rem;
+            background: #e6ebff;
+            color: #4a6cf7;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        /* Section */
+        .section {
+            padding: 48px 0;
+        }
+
+        .section-alt {
+            background-color: #fff;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .section-title h2 {
+            font-size: 1.5rem;
+            color: #1a2b4e;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            background: #4a6cf7;
+            border-radius: 4px;
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: #4a6cf7;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .section-desc {
+            color: #5a6a7a;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        /* Category Cards */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 20px;
+            border: 1px solid #eef0f3;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .category-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #1a2b4e;
+        }
+
+        .category-card p {
+            font-size: 0.85rem;
+            color: #6b7a8a;
+            margin-bottom: 12px;
+        }
+
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .category-tags span {
+            font-size: 0.75rem;
+            background: #f2f4f8;
+            padding: 2px 10px;
+            border-radius: 12px;
+            color: #4a5a6a;
+        }
+
+        /* Featured Sites */
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .site-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #eef0f3;
+            display: flex;
+            gap: 16px;
+            transition: box-shadow 0.2s;
+        }
+
+        .site-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .site-favicon {
+            width: 44px;
+            height: 44px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .site-info {
+            flex: 1;
+        }
+
+        .site-info h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .site-badge {
+            font-size: 0.65rem;
+            background: #e8f7ec;
+            color: #1a9c4a;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .site-info p {
+            font-size: 0.85rem;
+            color: #6b7a8a;
+            margin-bottom: 8px;
+        }
+
+        .site-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-category {
+            font-size: 0.75rem;
+            color: #8899a8;
+            background: #f5f7fa;
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        .site-link {
+            font-size: 0.8rem;
+            color: #4a6cf7;
+            font-weight: 500;
+        }
+
+        /* Guide Section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .guide-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #eef0f3;
+        }
+
+        .guide-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guide-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f4f6f8;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .guide-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-num {
+            background: #4a6cf7;
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 1px solid #eef0f3;
+        }
+
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #1a2b4e;
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            font-size: 0.9rem;
+            color: #5a6a7a;
+            line-height: 1.7;
+        }
+
+        .faq-toggle {
+            color: #4a6cf7;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #1a2b4e;
+            color: #a0b0c0;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .footer-about {
+            max-width: 320px;
+        }
+
+        .footer-about h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-about p {
+            font-size: 0.85rem;
+        }
+
+        .footer-links h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2a3f63;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .site-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 24px;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-illustration {
+                flex: none;
+                width: 100%;
+                max-width: 440px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px 0;
+                gap: 10px;
+            }
+            .main-nav {
+                order: 3;
+                width: 100%;
+                overflow-x: auto;
+            }
+            .main-nav ul {
+                gap: 20px;
+                padding-bottom: 4px;
+            }
+            .header-search {
+                margin-left: auto;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .site-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 32px 0;
+            }
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .header-search input {
+                width: 120px;
+            }
+            .hero-stats {
+                gap: 20px;
+            }
+            .stat-number {
+                font-size: 1.3rem;
+            }
+            .section {
+                padding: 32px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">无</div>
+                <span class="logo-text">无名小站导航</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#categories">分类</a></li>
+                    <li><a href="#featured">精选推荐</a></li>
+                    <li><a href="#guide">使用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" placeholder="搜索网站或关键词...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">✨ 发现小众与实用</span>
+                    <h1>无名小站网址导航</h1>
+                    <p>这里收录了许多不为人知却颇具价值的网站资源，从冷门工具到创意社区，从知识库到趣味驿站。无论你是寻找实用工具，还是无意间想发现网络的另一面，这份导航都能帮你找到值得收藏的无名小站。</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">收录站点</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">内容分类</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">每周更新</div>
+                            <div class="stat-label">持续扩充</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="illustration-list">
+                        <div class="ill-item">
+                            <span class="ill-icon">🔍</span>
+                            <span class="ill-text">小众搜索引擎</span>
+                            <span class="ill-tag">工具</span>
+                        </div>
+                        <div class="ill-item">
+                            <span class="ill-icon">📚</span>
+                            <span class="ill-text">数字图书馆</span>
+                            <span class="ill-tag">学习</span>
+                        </div>
+                        <div class="ill-item">
+                            <span class="ill-icon">🎨</span>
+                            <span class="ill-text">创意灵感集</span>
+                            <span class="ill-tag">设计</span>
+                        </div>
+                        <div class="ill-item">
+                            <span class="ill-icon">🎧</span>
+                            <span class="ill-text">独立音频社区</span>
+                            <span class="ill-tag">娱乐</span>
+                        </div>
+                        <div class="ill-item">
+                            <span class="ill-icon">💻</span>
+                            <span class="ill-text">极客工具箱</span>
+                            <span class="ill-tag">技术</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" id="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门分类</h2>
+                    <a href="#" class="section-more">查看全部分类 →</a>
+                </div>
+                <p class="section-desc">按兴趣和用途划分，快速定位你想找的那类无名小站。每个分类下都有值得收藏的宝藏网站。</p>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon" style="background:#e6f2ff;">🔧</div>
+                        <h3>实用工具</h3>
+                        <p>在线转换、压缩、解析等效率工具，让工作更轻松。</p>
+                        <div class="category-tags">
+                            <span>PDF处理</span>
+                            <span>格式转换</span>
+                            <span>图片工具</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon" style="background:#fff0e6;">📖</div>
+                        <h3>知识学习</h3>
+                        <p>公开课、文档库、学术资源，免费获取深度知识。</p>
+                        <div class="category-tags">
+                            <span>公开课</span>
+                            <span>电子书</span>
+                            <span>语言学习</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon" style="background:#e6ffe6;">🎨</div>
+                        <h3>设计创意</h3>
+                        <p>灵感素材、配色方案、免费字体与设计社区。</p>
+                        <div class="category-tags">
+                            <span>灵感库</span>
+                            <span>免费素材</span>
+                            <span>插画</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon" style="background:#f3e6ff;">🎮</div>
+                        <h3>趣味娱乐</h3>
+                        <p>在线小游戏、创意互动、冷知识网站，放松好去处。</p>
+                        <div class="category-tags">
+                            <span>小游戏</span>
+                            <span>冷知识</span>
+                            <span>互动艺术</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sites -->
+        <section class="section section-alt" id="featured">
+            <div class="container">
+                <div class="section-title">
+                    <h2>本周精选无名小站</h2>
+                    <a href="#" class="section-more">更多推荐 →</a>
+                </div>
+                <p class="section-desc">无门槛访问、无需注册的优质网站，每一处都值得你花上几分钟探索。</p>
+                <div class="site-grid">
+                    <div class="site-card">
+                        <div class="site-favicon">📡</div>
+                        <div class="site-info">
+                            <h3>收音机博物馆 <span class="site-badge">经典</span></h3>
+                            <p>在线收听全球数千个广播电台，重温怀旧电波魅力。</p>
+                            <div class="site-meta">
+                                <span class="site-category">娱乐 · 音频</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-favicon">🗺️</div>
+                        <div class="site-info">
+                            <h3>地图时光机</h3>
+                            <p>查看世界各地不同年代的历史地图，感受城市变迁。</p>
+                            <div class="site-meta">
+                                <span class="site-category">知识 · 历史</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-favicon">🌌</div>
+                        <div class="site-info">
+                            <h3>每日天文图</h3>
+                            <p>每天一张来自NASA或天文台的精美宇宙影像及解读。</p>
+                            <div class="site-meta">
+                                <span class="site-category">知识 · 科学</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-favicon">🍳</div>
+                        <div class="site-info">
+                            <h3>菜谱实验室</h3>
+                            <p>以科学方法拆解家常菜做法，拯救厨房新手。</p>
+                            <div class="site-meta">
+                                <span class="site-category">生活 · 美食</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-favicon">🧩</div>
+                        <div class="site-info">
+                            <h3>解压拼图集</h3>
+                            <p>收集大量在线拼图与小游戏，放松大脑的好去处。</p>
+                            <div class="site-meta">
+                                <span class="site-category">娱乐 · 游戏</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-favicon">💡</div>
+                        <div class="site-info">
+                            <h3>冷知识库</h3>
+                            <p>每天更新一条冷知识，满足你的好奇心。</p>
+                            <div class="site-meta">
+                                <span class="site-category">知识 · 科普</span>
+                                <a href="#" class="site-link">访问 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide -->
+        <section class="section" id="guide">
+            <div class="container">
+                <div class="section-title">
+                    <h2>如何发现更多无名小站</h2>
+                </div>
+                <p class="section-desc">好的网站需要用心发掘，掌握一些小技巧能让你在网络深处找到更多有价值的内容。</p>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>🔎 主动搜索技巧</h3>
+                        <ul>
+                            <li><span class="guide-num">1</span> 使用不同的关键词组合搜索，尝试“工具”、“资源”、“在线”等词。</li>
+                            <li><span class="guide-num">2</span> 关注一些个人博客和独立站长，他们常推荐小众网站。</li>
+                            <li><span class="guide-num">3</span> 在社交平台搜索“宝藏网站”等话题，常有用户分享合集。</li>
+                            <li><span class="guide-num">4</span> 查看同类网站的友情链接，往往能顺藤摸瓜发现新站。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🛡️ 安全访问注意事项</h3>
+                        <ul>
+                            <li><span class="guide-num">1</span> 尽量避免在陌生小站输入个人敏感信息。</li>
+                            <li><span class="guide-num">2</span> 下载文件前先确认网站的可信度，防止捆绑程序。</li>
+                            <li><span class="guide-num">3</span> 可先使用在线检测工具查看网站安全性。</li>
+                            <li><span class="guide-num">4</span> 如遇大量弹窗或强制跳转，建议直接关闭页面。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-alt" id="faq">
+            <div class="container">
+                <div class="section-title" style="justify-content:center;">
+                    <h2 style="padding-left:0;">常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            无名小站是什么意思？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            通常指那些相对小众、知名度不高但内容或功能有价值的网站。它们可能缺乏宣传，但往往在某些领域做得非常出色，因此被网友称为“无名小站”。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            这些网站需要付费吗？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            本导航收录的绝大多数网站可以免费访问基础功能，部分站点可能提供付费增值服务，例如去广告、高级功能或更多存储空间。访问时注意查看网站说明即可。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何提交一个不错的无名小站？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            如果你发现了有趣且实用的网站，可以通过本站页脚的联系方式提交建议。我们会审核网站内容与可用性，确认后收录到对应的分类中。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            为什么有些网站偶尔打不开？
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            个人站点或小型网站可能出现服务器不稳定、域名过期或临时维护等情况。建议稍后再试，或查看该网站是否有官方社交媒体账号获取最新状态。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>关于无名小站导航</h3>
+                    <p>我们致力于挖掘和整理互联网上那些低调却实用的网站，让更多人发现网络深处的宝藏。所有推荐均经过人工筛选，确保内容健康、可用。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#categories">网站分类</a></li>
+                        <li><a href="#featured">精选推荐</a></li>
+                        <li><a href="#guide">使用指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>合作与联系</h4>
+                    <ul>
+                        <li>站点提交</li>
+                        <li>友情链接</li>
+                        <li>意见反馈</li>
+                        <li>免责声明</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 无名小站网址导航 · 发现小众之美 · 本站仅提供网址收录与分享</p>
+            </div>
+        </div>
+    </footer>
+</body>
+                          </html>
